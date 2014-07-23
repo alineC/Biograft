@@ -71,7 +71,7 @@ $totalRows_noticias = mysql_num_rows($noticias);
           <td><?php echo $row_noticias['titulo']; ?></td>
           <td><?php echo $row_noticias['subtitulo']; ?></td>
           <td><?php echo $row_noticias['cuerpo']; ?></td>
-          <td><?php echo $row_noticias['foto']; ?></td>
+          <td ><?php //echo $row_productos['foto']; ?> <img  style="width: 100px;" class="img table-img" src="<?php echo $row_productos['foto']; ?>"> </td>
           <td><?php echo $row_noticias['fecha']; ?></td>
           <td>
             <a class="actn_editar" href="noticias_edit.php?id=<?php echo $row_noticias['id']; ?>">

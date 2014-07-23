@@ -1,8 +1,11 @@
 
 <html>
 <head>
-	<title></title>
+	<title>Biograft</title>
 	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="http://www.humankeyconsulting.com/biograft/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="http://www.humankeyconsulting.com/biograft/favicon.ico" type="image/x-icon"> 
 
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/less-1.7.3.min.js"></script>

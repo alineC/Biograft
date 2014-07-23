@@ -29,7 +29,7 @@
             </a>
           </div>
           <div class="col-xs-2 pull-right">
-            <a href="#/contacto">
+            <a href="contacto.php">
               <i class="fa fa-envelope-o fa-lg"></i>
               <!--
               <img src="img/mail.png">

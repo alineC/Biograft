@@ -149,7 +149,7 @@ de alternativas para mejorar la calidad de vida de los pacientes.</i>
   <div class="container">
   <div class="row  mb130">
     <div class="col-xs-4 inicio_thumb">
-      <a href="">
+      <a href="http://humankeyconsulting.com/biograft/productos.php?id=6">
         <img class="img thumbnail" src="img/home_bioDBM.png">
         <h4>BioDBM</h4>
         <p>
@@ -160,7 +160,7 @@ de alternativas para mejorar la calidad de vida de los pacientes.</i>
     </div>
     <div class="col-xs-4 inicio_thumb">
       
-      <a href="">
+      <a href="http://humankeyconsulting.com/biograft/productos.php?id=9">
         <img class="img thumbnail" src="img/home_polvoHueso.png">
         <h4>Polvo de Hueso</h4>
         <p>
@@ -171,7 +171,7 @@ de alternativas para mejorar la calidad de vida de los pacientes.</i>
     </div>
     <div class="col-xs-4 inicio_thumb">
       
-      <a href="">
+      <a href="http://humankeyconsulting.com/biograft/productos.php?id=5">
         <img class="img thumbnail" src="img/home_biosponge.png">
         <h4>BioSponge</h4>
         <p>
@@ -182,7 +182,7 @@ de alternativas para mejorar la calidad de vida de los pacientes.</i>
     </div>
     <div class="col-xs-4 inicio_thumb">
       
-      <a href="procesos.php">
+      <a href="http://humankeyconsulting.com/biograft/tecnologia.php">
         <img class="img thumbnail" src="img/biograft_home_procesos.png">
         <h4>Procesos</h4>
               <p>

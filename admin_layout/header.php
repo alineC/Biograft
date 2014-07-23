@@ -19,8 +19,10 @@
       
       <ul class="nav navbar-nav navbar-right">
         <li><a href="noticias_admin.php">Noticias</a></li>
+        <li><a href="descargas_admin.php">Descargas</a></li>
         <li><a href="tecnologia_admin.php">Galer&iacute;a Instalaciones</a></li>
         <li><a href="productos_admin.php">Productos</a></li>
+        <li><a href="categorias_admin.php">Categor&iacute;as</a></li>
         <li class="dropdown">
 
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa text-primary fa-user"></i> Administrador <span class="caret"></span></a>

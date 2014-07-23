@@ -59,91 +59,85 @@
 	  	<h3 class="mt60">Cont&aacute;ctenos </h3>
 	  	<p>Ya sea un paciente, m&eacute;dico, una organizaci&oacute;n u hospital con gusto atenderemos su solicitud. Por favor llene el formulario completo y pronto nos pondremos en contacto con usted.</p>
 	  	<div class="row mb130">
+	  		<form class="form-horizontal" role="form" name="form1" action="contacto_enviar.php" method="post">
 	  		<div class="col-xs-6">
 	  			<h3>Datos Personales</h3>
-	  			<form class="form-horizontal" role="form">
+	  			
 				  <div class="form-group">
 				    <label for="inputEmail3" class="col-xs-2 control-label">Nombre</label>
 				    <div class="col-xs-10">
-				      <input type="text" class="form-control" placeholder="Nombre">
+				      <input type="text" class="form-control" name="nombre" placeholder="Nombre">
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="inputPassword3" class="col-xs-2 control-label">E-mail</label>
 				    <div class="col-xs-10">
-				      <input type="email" class="form-control" placeholder="e-mail">
+				      <input type="email" class="form-control" name="email" placeholder="e-mail">
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="inputPassword3" class="col-xs-2 control-label">Ocupaci&oacute;n</label>
 				    <div class="col-xs-10">
-				      <input type="text" class="form-control" placeholder="ocupaci&oacute;n">
+				      <input type="text" class="form-control" name="ocupacion" placeholder="ocupaci&oacute;n">
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="inputPassword3" class="col-xs-2 control-label">Tel&eacute;fono</label>
 				    <div class="col-xs-10">
-				      <input type="text" class="form-control" placeholder="telefono">
+				      <input type="text" class="form-control" name="telefono" placeholder="telefono">
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="inputPassword3" class="col-xs-2 control-label">Fax</label>
 				    <div class="col-xs-10">
-				      <input type="text" class="form-control" placeholder="Fax">
+				      <input type="text" class="form-control" name="fax" placeholder="Fax">
 				    </div>
 				  </div>
-				  <div class="row">
-				  	<div class="col-xs-2 pull-right">
-				  		<button type="button" class="btn btn-link">Enviar</button>
-				  	</div>
-				  	<div class="col-xs-2 pull-right">
-				  		<button type="button" class="btn btn-link">Borrar</button>
-				  	</div>
-				  </div>
-				</form>
+				
 	  		</div>
 	  		<div class="col-xs-6">
 	  			<h3>Datos Empresariales</h3>
-	  			<form class="form-horizontal" role="form">
+	  			
 				  <div class="form-group">
 				    <label for="" class="col-xs-5 control-label">Nombre del Hospital</label>
 				    <div class="col-xs-7">
-				      <input type="text" class="form-control" placeholder="Nombre del Hospital">
+				      <input type="text" class="form-control" name="hospital" placeholder="Nombre del Hospital">
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="" class="col-xs-5 control-label">Domicilio</label>
 				    <div class="col-xs-7">
-				      <textarea class="form-control" rows="3"></textarea>
+				      <textarea class="form-control" name="domicilio" rows="3"></textarea>
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="" class="col-xs-5 control-label">Mensaje</label>
 				    <div class="col-xs-7">
-				      <textarea class="form-control" rows="3"></textarea>
+				      <textarea class="form-control" name="mensaje" rows="3"></textarea>
 				    </div>
 				  </div>
 				  <div class="row">
 				  	<div class="col-xs-2 pull-right">
-				  		<button type="button" class="btn btn-link">Enviar</button>
+				  		<button type="submit" name="enviar" class="btn btn-link" >Enviar</button>
 				  	</div>
 				  	<div class="col-xs-2 pull-right">
-				  		<button type="button" class="btn btn-link">Borrar</button>
+				  		<button type="reset" class="btn btn-link">Borrar</button>
 				  	</div>
 				  </div>
-				</form>
+				
 	  		</div>
+	  		</form>
 	  	</div>
 	  </div>
 	  <div class="tab-pane" id="messages">
 	  	<h3 class="mt60">&iquest;Deseas trabajar con nosotros?</h3>
 	  	<div class="row mb130">
 	  		<div class="col-xs-6">
-	  			<p class="text-justify">Si deseas formar parte de la familia Biograft, por favor llena la informaci&oacute;n y
-	nos pondremos en contacto contigo para concretar una entrevista.</p>
+	  			<p>Si deseas formar parte de la familia Biograft, por favor llena la informaci&oacute;n y
+	os pondremos en contacto contigo para concretar una entrevista.</p>
 	  		</div>
 	  		<div class="clearfix"></div>
-	  		<form class="form-horizontal" role="form">
+	  		<form class="form-horizontal" role="form2" name="form2" action="bolsa_enviar.php" method="post">
 	  		<div class="col-xs-6 mt30">
 				<h3 class="no-margin">
 					Datos Personales
@@ -152,43 +146,43 @@
 				  <div class="form-group mt30">
 				    <label for="inputEmail3" class="col-xs-6 control-label">Nombre</label>
 				    <div class="col-xs-6">
-				      <input type="text" class="form-control" placeholder="Nombre">
+				      <input type="text" class="form-control" name="nombreb" placeholder="Nombre">
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="inputEmail3" class="col-xs-6 control-label">E-mail</label>
 				    <div class="col-xs-6">
-				      <input type="text" class="form-control" placeholder="E-mail">
+				      <input type="text" class="form-control" name="emailb" placeholder="E-mail">
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="inputEmail3" class="col-xs-6 control-label">Carrera</label>
 				    <div class="col-xs-6">
-				      <input type="text" class="form-control" placeholder="Carrera">
+				      <input type="text" class="form-control" name="carrera" placeholder="Carrera">
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="inputEmail3" class="col-xs-6 control-label">Especializaci&oacute;n</label>
 				    <div class="col-xs-6">
-				      <input type="text" class="form-control" placeholder="Especializaci&oacute;n">
+				      <input type="text" class="form-control" name="especializacion" placeholder="Especializaci&oacute;n">
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="inputEmail3" class="col-xs-6 control-label">A&ntilde;os de Experiencia</label>
 				    <div class="col-xs-6">
-				      <input type="text" class="form-control" placeholder="A&ntilde;os de Experiencia">
+				      <input type="text" class="form-control" name="experiencia" placeholder="A&ntilde;os de Experiencia">
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="inputEmail3" class="col-xs-6 control-label">Tel&eacute;fono</label>
 				    <div class="col-xs-6">
-				      <input type="text" class="form-control" placeholder="Tel&eacute;fono">
+				      <input type="text" class="form-control" name="telefonob" placeholder="Tel&eacute;fono">
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="inputEmail3" class="col-xs-6 control-label">Fax</label>
 				    <div class="col-xs-6">
-				      <input type="text" class="form-control" placeholder="Fax">
+				      <input type="text" class="form-control" name="faxb" placeholder="Fax">
 				    </div>
 				  </div>
 
@@ -197,16 +191,16 @@
 	  			<div class="form-group mt30">
 				    <label for="inputEmail3" class="col-xs-4 control-label">Mensaje</label>
 				    <div class="col-xs-8">
-				      <textarea class="form-control" rows="15"></textarea>
+				      <textarea class="form-control" name="faxb" rows="15"></textarea>
 				    </div>
 				  </div>
 	  		</div>
 	  		<div class="row">
 			  	<div class="col-xs-2 pull-right">
-			  		<button type="button" class="btn btn-link">Enviar</button>
+			  		<button type="submit" class="btn btn-link">Enviar</button>
 			  	</div>
 			  	<div class="col-xs-2 pull-right">
-			  		<button type="button" class="btn btn-link">Borrar</button>
+			  		<button type="reset" class="btn btn-link">Borrar</button>
 			  	</div>
 			  </div>
 	  		</form>

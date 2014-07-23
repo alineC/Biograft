@@ -1,3 +1,4 @@
+
 <?php require_once('Connections/connection.php'); ?>
 <?php
 if (!function_exists("GetSQLValueString")) {
@@ -38,6 +39,13 @@ $row_tec = mysql_fetch_assoc($tec);
 $totalRows_tec = mysql_num_rows($tec);
 ?>
 <?php include 'layout/head.php';?>
+
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/lightbox.min.js"></script>
+	
+
+<link href="css/lightbox.css" rel="stylesheet" />
+
 <?php include 'layout/header.php';?>
 
 <div class="slider banner">
@@ -77,7 +85,7 @@ $totalRows_tec = mysql_num_rows($tec);
 							Dise&ntilde;o y funcionalidad con altos est&aacute;ndares de calidad.
 						</small>
 					</h2>
-					<p class="mt30">
+					<p class="mt30 text-justify">
 						Con m&aacute;s de 2000m2, nuestras instalaciones han sido especialmente dise&ntilde;adas y validadas espec&iacute;ficamente para la producci&oacute;n de dispositivos m&eacute;dicos derivados de tejido musculo esquel&eacute;tico humano.
 						<br>
 			Bajo los m&aacute;s altos est&aacute;ndares de calidad e higiene, contamos con cuatro cuartos limpios (clean rooms) en donde se realiza la manufactura y procesamiento del tejido musculo esquel&eacute;tico para obtener los implantes <b>Biograft&reg;</b>.
@@ -92,12 +100,23 @@ $totalRows_tec = mysql_num_rows($tec);
                     
 					  	<?php do { ?>
                           <div class="col-xs-3"> 
-                          	<a data-toggle="modal" data-target="#myModal" class="thumbnail  thumb_hover" href=""> 
-                          		<img src="<?php echo $row_tec['foto']; ?>"> 
-                          		<i class="fa fa-search"></i> 
-                          	</a> 
+
+                            
+                            
+                            <a class="example-image-link thumbnail thumb_hover" href="<?php echo $row_tec['foto']; ?>" data-lightbox="example-set" data-title="<?php echo $row_tec['titulo']; ?>">
+						<img class="example-image" src="<?php echo $row_tec['foto']; ?>" alt=""/>
+                        <i class="fa fa-search"></i> 
+					</a>
+                            
+                            
                           </div>
                         <?php } while ($row_tec = mysql_fetch_assoc($tec)); ?>
+                        
+                        
+                        
+                        
+                        
+                        
                         <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 						  <div class="modal-dialog modal-lg">
 						    <div class="modal-content">
@@ -193,7 +212,7 @@ $totalRows_tec = mysql_num_rows($tec);
 		de procesos innovadores.
 		  				</small>
 		  			</h2>
-		  			<p>
+		  			<p class="text-justify">
 		  				Nuestros procesos nos permiten asegurar que nuestro producto es est&eacute;ril, gracias a la mezcla de:
   				  <ul>
 		  					<li>Una adecuada selecci&oacute;n del donador.</li>
@@ -247,7 +266,7 @@ $totalRows_tec = mysql_num_rows($tec);
 				  			<h2>
 				  				<small>Certificados por la AATB como especialistas en banco de tejidos.</small>
 				  			</h2>
-				  			<p>
+				  			<p class="text-justify">
 				  				<b>Biograft&reg; </b>se mantiene a la vanguardia en la calidad de sus productos, preocup&aacute;ndonos siempre por mantener la calidad de nuestra labor ya que incide en la vida de lso seres humanos que recibir&aacute;n nuestros implantes.
 				  				<br><br>
 								La calidad de nuestros productos comienza a generarse desde la adecuada selecci&oacute;n de los donantes. Para efectuar esta labor contamos con personal certificado por la <b>AATB (Asociaci&oacute;n Americana de Bancos de Tejidos)</b> como Especialista en Banco de Tejidos (CBTS). Quienes se encargan de hacer una revisi&oacute;n exhaustiva del historial m&eacute;dico–social del donador potencial. Lo anterior involucra la b&uacute;squeda de patrones cl&iacute;nicos y/o evidencias de alto riego para descartar enfermedades contagiosas o autoinmunes que representen un riesgo a la salud de los pacientes que reciban un implante. La labor de aprobar o rechazar un donador potencial se hace con base en lineamientos internacionales como los est&aacute;ndares de la <b>AATB
@@ -262,7 +281,7 @@ $totalRows_tec = mysql_num_rows($tec);
 				  			<h2>
 				  				<small>Procesos que aseguran implantes libres de riesgo.</small>
 				  			</h2>
-				  			<p>
+				  			<p class="text-justify">
 				  				Las pruebas que se realizan a estas muestras son para descartar la presencia de hepatitis provocada por HBV y HCV, SIDA,  s&iacute;filis, leucemia por el HTLV I y II y enfermedad de Chagas, para garantizar que no existe riesgo de infecci&oacute;n de hepatitis y/o SIDA.
 								A estas muestras sangu&iacute;neas se les realiza una prueba de amplificaci&oacute;n de &aacute;cidos nucleicos <b>(NAT: nucleic acid amplification testing)</b> los cuales aumentan la sensibilidad de detecci&oacute;n de los virus y permiten su descubrimiento aun cuando en las otras pruebas el resultado sea negativo.
 								 <br><br>
@@ -276,7 +295,7 @@ $totalRows_tec = mysql_num_rows($tec);
 				  				<small>Respaldo de la FDA para
 		el an&aacute;lisis de muestras.</small>
 				  			</h2>
-				  			<p>
+				  			<p class="text-justify">
 				  				A nivel de literatura, Prauss A. recomienda en su art&iacute;culo: “Tissue donation and virus safety: more nucleic acid amplification testing is needed”, publicado en Transplant Infectious Disease, que si no existe un procedimiento efectivo para inactivar virus, para aprobar o rechazar donadores, se deben usar las pruebas de amplificaci&oacute;n de &aacute;cidos nucleicos para las hepatitis y el SIDA.
 				  				<br><br>
 								Considerando la importancia de las pruebas de <b>ELISA Y NAT</b>, <b>Biograft&reg;</b> las ha involucrado como parte de su proceso de selecci&oacute;n de donadores, no obstante de tener un m&eacute;todo de esterilizaci&oacute;n que garantiza la inactivaci&oacute;n de part&iacute;culas virales. Con ello aseguramos la confianza de que nuestros productos est&eacute;n libres de agentes infecciosos.
@@ -298,7 +317,7 @@ $totalRows_tec = mysql_num_rows($tec);
 				  					Procesamiento de tejidos con altos est&aacute;ndares de calidad.
 				  				</small>
 				  			</h2>
-				  			<p>
+				  			<p class="text-justify">
 				  				Cada uno de los implantes <b>Biograft&reg;</b> son procesados a partir de tejidos procurados con t&eacute;cnicas as&eacute;pticas y con diferentes controles durante todo el proceso de procuraci&oacute;n. Entrando en una fase de cuarentena mientras recibimos y analizamos, tanto la documentaci&oacute;n como los resultados de las pruebas anal&iacute;ticas. Una vez que nos aseguramos que la documentaci&oacute;n y las pruebas cumplen con las regulaciones nacionales e internacionales con los requerimientos y est&aacute;ndares necesarios, los tejidos son liberados para su procesamiento.
 
 								La ruta en la cual el tejido es aprobado por Direcci&oacute;n M&eacute;dica y se convierte en implante, empieza con el control de cada uno de los congeladores y ultracongeladores por donde el tejido va pasando hasta alcanzar una alteraci&oacute;n que permita su manipulaci&oacute;n y la reducci&oacute;n del deterioro por los cambios de temperatura.
@@ -310,7 +329,7 @@ $totalRows_tec = mysql_num_rows($tec);
 				  					Contamos con Clean Rooms &uacute;nicos en M&eacute;xico.
 				  				</small>
 				  			</h2>
-				  			<p>
+				  			<p class="text-justify">
 				  				Cuando el tejido alcanza la temperatura ambiente es ingresado a nuestros <b>Clean Rooms</b>, en donde el personal de proceso se encarga de limpiar, cortar, medir e incubar el implante, transformando los tejidos para obtener implantes en sus diferentes formas y tama&ntilde;os.
 
 								Cada acci&oacute;n de esta etapa es llevada bajo estrictos procesos de asepsia, alcanzando los est&aacute;ndares de limpieza y desinfecci&oacute;n de &aacute;reas de producci&oacute;n farmac&eacute;uticas.
@@ -336,7 +355,7 @@ $totalRows_tec = mysql_num_rows($tec);
 					  			<small>Seguridad y esterilidad
 	en nuestros productos.</small>
 					  		</h2>
-					  		<p class="mt20">
+					  		<p class="mt20 text-justify">
 					  			Despu&eacute;s de la seguridad del producto, la segunda respuesta que se busca es la esterilidad, es necesario hacer la observaci&oacute;n que los procesos as&eacute;pticos y la irradiaci&oacute;n con rayos gamma, el procesamiento con soluciones antibi&oacute;ticas, el bleaching (exposici&oacute;n a productos clorados) y otros procesos de disminuci&oacute;n de biocarga, no son suficientes para asegurar que un producto es est&eacute;ril.
 	<br>
 	<br>
@@ -352,7 +371,7 @@ $totalRows_tec = mysql_num_rows($tec);
 					  		<h2>
 					  			<small>Implantes que mantienen fuerza y elasticidad.</small>
 					  		</h2>
-					  		<p class="mt20">
+					  		<p class="mt20 text-justify">
 					  			Por el momento, fuera del Proceso <b>Clearant&reg;</b>, no existe una tecnolog&iacute;a capaz de reducir substancialmente todos los tipos de pat&oacute;genos.
 					  			<br><br>
 								El Proceso <b>Clearant&reg;</b> logra un nivel de esterilizaci&oacute;n convencional microbiana que excede el de un dispositivo m&eacute;dico, sin la afectaci&oacute;n de la integridad estructural o biomec&aacute;nica del aloinjerto. El implante mantiene fuerza y elasticidad, y se integra bien con el tejido circundante.
@@ -377,7 +396,7 @@ $totalRows_tec = mysql_num_rows($tec);
 				  				<small>Protecci&oacute;n de tejidos para
 el proceso de esterilizaci&oacute;n.</small>
 				  			</h2>
-				  			<p class="mt30">
+				  			<p class="mt30 text-justify">
 				  				Como parte del procesamiento, los implantes <b>Biograft&reg;</b> son incubados en soluci&oacute;n radiocr&iacute;oprotectora <b>Clearant&reg;</b>, en este paso se brinda una protecci&oacute;n al tejido el cual se someter&aacute; a una alta dosis de irradiaci&oacute;n gamma. En caso de no brindarles esta protecci&oacute;n, los tejidos se ver&iacute;an da&ntilde;ados en su integridad con el consiguiente impacto en su desempe&ntilde;o.
 				  				<br><br>
 								Terminada la incubaci&oacute;n, se procede a esterilizar los implantes con cobalto 60, el cual genera una irradiaci&oacute;n gamma, que son ondas electromagn&eacute;ticas como las ondas de la luz pero con mayor energ&iacute;a. El material radioactivo no contamina nuestros implantes ya que durante todo el proceso de  esterilizaci&oacute;n se mantienen en recipientes herm&eacute;ticos de acero inoxidable de doble pared y los implantes s&oacute;lo reciben la energ&iacute;a de los rayos gamma. 
@@ -388,7 +407,7 @@ el proceso de esterilizaci&oacute;n.</small>
 				  				<small>Procesos avalados por
 diversas instituciones.</small>
 				  			</h2>
-				  			<p class="mt30">
+				  			<p class="mt30 text-justify">
 				  				De acuerdo al Instituto Nacional de Investigaciones Nucleares, este proceso es autorizado por diferentes autoridades como: la Organizaci&oacute;n Mundial de la Salud (OMS), la <b>FDA (Food and Drug Administration)</b>, la Organizaci&oacute;n de la Alimentaci&oacute;n y de la Agricultura (FAO), la Comisi&oacute;n Codex Alimentarius y el Organismo Internacional de Energ&iacute;a At&oacute;mica (OIEA).
 <br><br>
 								Con esta dosis de radiaci&oacute;n aplicada en el proceso aseguramos la eliminaci&oacute;n de la biocarga (en caso en que los tejidos presenten cultivos positivos desde la procuraci&oacute;n como resultado de la flora del propio donador) y de esta manera alcanzar niveles de aseguramiento de la esterilidad que cumplen con los est&aacute;ndares nacionales e internacionales (Farmacopea Nacional y USP Pharmacopeia). 
@@ -398,7 +417,7 @@ diversas instituciones.</small>
 				  			<h2>
 				  				<small>Niveles de aseguramiento de la esterilidad con altos est&aacute;ndares.</small>
 				  			</h2>
-				  			<p class="mt30">
+				  			<p class="mt30 text-justify">
 				  				La soluci&oacute;n <b>Clearant&reg;</b> ejerce su funci&oacute;n al preservar la calidad tisular y de desempe&ntilde;o del producto para que este ejerza su funci&oacute;n y devuelva al paciente su calidad de vida.
 				  			</p>
 				  			<div class="">
@@ -421,7 +440,7 @@ diversas instituciones.</small>
 						<small>Evidencia cl&iacute;nica de
 		nuestros productos.</small>
 		  			</h2>
-		  			<p class="mt20">
+		  			<p class="mt20 text-justify">
 		  				Con una visi&oacute;n estrat&eacute;gica, pero sobre todo &eacute;tica, llevamos a cabo acciones apegadas a nuestra misi&oacute;n. Apoyamos el desarrollo de la ciencia en M&eacute;xico, por ello <b>Biograft&reg;</b> participa en protocolos cl&iacute;nicos en centros de alta especialidad, con el prop&oacute;sito de generar evidencia cl&iacute;nica del desempe&ntilde;o de nuestros productos.
 		  				<br><br>
 						<i>
@@ -455,7 +474,7 @@ diversas instituciones.</small>
 		de tecnolog&iacute;a innovadora.
 						</small>
 		  			</h2>
-		  			<p class="mt20">
+		  			<p class="mt20 text-justify">
 		  				Una antena tecnol&oacute;gica es una entidad avanzada que provee a su socio tecnol&oacute;gico de informaci&oacute;n y know-how de procesos y productos de punta, generados y manufacturados en un &aacute;rea geogr&aacute;fica determinada.
 <br><br>
 						Por ello, <b>Biograft&reg; </b> pone al alcance de la comunidad m&eacute;dica implantes de tejido m&uacute;sculo esquel&eacute;tico humano, procesados con la mejor tecnolog&iacute;a a nivel mundial y siguiendo los m&aacute;s estrictos est&aacute;ndares internacionales como ISO 13485 y los lineamientos de la <b>AATB (Asociaci&oacute;n Americana de Bancos de Tejidos)</b>.
@@ -464,7 +483,7 @@ diversas instituciones.</small>
 		  			</p>
 		  		</div>
 		  		<div class="col-xs-4">
-		  			<p>
+		  			<p class="text-justify">
 		  				As&iacute; mismo, exportamos tambi&eacute;n  tecnolog&iacute;a a Espa&ntilde;a y Corea del Sur. Recibimos tejidos de dichos pa&iacute;ses para ser procesados con tecnolog&iacute;a <b>Biograft&reg;</b> en nuestras instalaciones y posteriormente
 		ser enviados a dichos pa&iacute;ses como un producto terminado, incluso con su marca.
 <br><br>
@@ -472,7 +491,7 @@ diversas instituciones.</small>
 		  			</p>
 		  		</div>
 		  		<div class="col-xs-4">
-		  			<p>
+		  			<p class=" text-justify">
 		  				Adem&aacute;s, contamos con un registro ante la <b>FDA (Food and Drug Administration)</b> con N&uacute;mero FEI 3004642077 y cada uno de nuestros productos cuenta con registro sanitario propio, expedido por la Secretaria de Salud a trav&eacute;s de la Comisi&oacute;n Federal de Protecci&oacute;n Contra Riesgos Sanitarios (COFEPRIS).
 		  			</p>
 		  		</div>

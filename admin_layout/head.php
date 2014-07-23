@@ -2,7 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Untitled Document</title>
+<link rel="icon" href="http://www.humankeyconsulting.com/biograft/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.humankeyconsulting.com/biograft/favicon.ico" type="image/x-icon"> 
+
+<title>Biograft - Admin</title>
 <script src="tinymce/tinymce.min.js"></script>
   <script>
   tinymce.init({selector:'textarea'});

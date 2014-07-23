@@ -31,6 +31,9 @@
 .text-shadow {
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
 }
+.text-primary {
+    color: @brand-primary;    
+}
 .border-radius(@radius) {
 	-webkit-border-radius: @radius;
 	-moz-border-radius: @radius;
@@ -56,6 +59,7 @@
 @bg-body: #f9f9f9;
 body {
     background-color: @bg-body;
+    font-size: 13px;
 }
 .container {
     background-color: #fff;
@@ -70,7 +74,7 @@ body {
     font-variant: small-caps;
     color: #00a4e4;
     border-bottom: 3px solid #f0f0f0;
-    padding: 10px 15px;
+    padding: 10px 40px;
     background-color: #fff;
     margin: 0;
     margin-bottom: .5em;
@@ -197,4 +201,67 @@ label {
 }
 input::-moz-focus-inner { 
   border: 0; 
+}
+.ui-multiselect ul.available, .ui-multiselect ul.selected {
+    height: 300px !important;
+}
+.ui-multiselect li {
+    height: auto;
+}
+.ui-multiselect {
+    border: 1px solid #e2e2e2;
+    .border-radius(4px);
+    width: 100% !important;
+} 
+.ui-widget-header {
+    background-image: none;
+    background-color: #fff;
+    color: #666;
+    font-family: "HedleyNewWeb-Medium", "Helvetica Neue", Helvetica, Sans serif;
+    height: 50px;
+    a {
+        color: @brand-primary;
+    }
+}
+.ui-state-default, .ui-widget-content .ui-state-default {
+    background-image: none;
+    background-color: #fff;
+    border-bottom: 1px solid #e2e2e2 !important;
+}
+.ui-multiselect .ui-state-hover {
+    color: @brand-primary;
+}
+.ui-multiselect div.selected, .ui-multiselect div.available {
+    width: 50% !important;
+}
+.container-fluid {
+    padding-left: 55px;
+    padding-right: 55px;
+}
+.panel {
+    margin-bottom: 0;
+    background-color: transparent;
+    .border-radius(0);
+    border:none;
+    .box-shadow(0 0 0 rgba(255,255,255, 0));
+}
+.panel-default > .panel-heading {
+    background-color: #fff;
+    color: @text-color;
+    border-color: transparent;
+}
+.panel-body {
+    .page-header {
+        margin: 5px 0 10px;
+    }
+}
+.collapse.in {border-top: 1px solid #e2e2e2;}
+.text-cat_azul {
+    .text-primary;
+}
+.text-cat_morado {
+    color: #7E58A4;
+}
+.text-cat_verde {
+    color: #3E7B38;
 }

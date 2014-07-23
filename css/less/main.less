@@ -217,7 +217,7 @@ input::-moz-focus-inner {
     padding-top: 20px !important;
     background-color: #E1E1E1;
 	.container {
-		max-width: 1024px;
+		max-width: 1280px;
 		h3 {
 			font-family: "HedleyNewWeb-Medium";
 			margin-bottom: 10px;
@@ -253,9 +253,8 @@ input::-moz-focus-inner {
 	width: 100%;
 }
 .img-producto {
-    border: 1px solid #919292;
-	.border-radius(3px); 
 	margin: 0 auto;
+	width: 100%;
 }
 .inicio_thumb {
 	.mt(35px);
@@ -450,11 +449,20 @@ table.noticias_table {
     }
 }
 .productos_menu {
+    padding-left: 15px;
 	li {
 		list-style: none;
+		h4 {
+		    margin: 20px 0 5px;
+		    font-size: 20px;
+		}
+		ul {
+		    padding-left: 15px;
+		}
 		ul li {
 			font-family: "HedleyNewWeb-LightItalic";
-			font-size: 120%;
+			font-size: 110%;
+			margin: 4px 0;
 			i {
 				font-size: 40%;
 			}
@@ -472,8 +480,18 @@ table.noticias_table {
 	margin: 0;
 	padding: 0;
 	li {
-		list-style: none;
+		list-style: square;
 	}
+}
+.producto_descripcion {
+    li {
+        list-style: square;
+    }
+}
+.producto_aplicaciones {
+    li {
+        list-style: square;
+    }
 }
 .thumbnail {
 	padding: 0;
@@ -506,6 +524,7 @@ table.noticias_table {
 }
 .thumbnail_noticias {
     .thumbnail;
+    width: 200px;
     overflow: hidden;
     .caption {
         text-align: center;
@@ -691,7 +710,7 @@ thead tr td, thead tr td p {
 
 thead tr td {
 	padding: 10px;
-	height: 165px;
+	height: 184px;
 	vertical-align: bottom;
 
 }
@@ -823,18 +842,18 @@ thead tr td {
 }
 
 .banner-head {
-        bottom: 18%;
-        left: 18%;
-        
-        .text-shadow-full(2px, 2px, 4px, rgba(0,0,0,1));
-        .text-left;
-        h1 {
-            color: #fff;
-            font-size: 3.5em !important;
-        }
+    bottom: 18%;
+    left: 18%;
+    
+    .text-shadow-full(2px, 2px, 4px, rgba(0,0,0,1));
+    .text-left;
+    h1 {
+        color: #fff;
+        font-size: 3.5em !important;
+    }
 }
 .container-banner-head {
-    bottom: 18%;
+    bottom: 41%;
     display: block;
     left: 12%;
     position: absolute;
@@ -1046,4 +1065,77 @@ html,body{height:100%;}
     background-color:#E0E2E1;
 }
 
+.padre {
+    display: table;
+	height:120px;
+	overflow: hidden;
+}
+.hijo {
+    display: table-cell;
+	vertical-align: middle;
+}
+.pleca-gris {
+   .nav > li > a {
+        padding: 0; 
+    } 
+}
 
+.bullets-squared {
+    ul {
+        .producto_codigo;
+        padding: 0 0 0 40px;
+        li {
+            margin: 10px 0;
+        }
+    }
+}
+.img-noticia {
+    width: 100%;
+    }
+    
+.tabla_aplicaciones {
+    tbody tr td {
+        .text-center;
+        .cell_primary_opacity;
+        border: .125em solid #848484;
+    }
+    tbody tr td:first-child {
+        .white_bg;
+        width: 400px;
+    }
+}
+.cabeza-fija {
+    position: relative;
+    border: 1px solid #ccc;
+    height: 500px;
+    overflow: auto;
+    table {
+        position: relative;
+        width: 100%;
+        thead {
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+.affix-top {
+    top: 0px;  
+}
+.affix {
+    position: fixed;
+    top: 0px;
+    width: 979px;
+}
+.affix-top, .affix {
+    table {
+        width: 100%;
+        tr td:first-child {
+            width: 400px;
+        }
+    }
+}
+#my-affix.affix + #aplicaciones {
+    margin-top: 192px;
+}

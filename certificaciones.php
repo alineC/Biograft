@@ -67,12 +67,12 @@
 			<div class="col-xs-4">
 				<div class="row">
 					<div class="col-xs-6 mt40">
-						<button class="no-border" data-toggle="modal" data-target="#myModal">
-							<img class="img" src="img/certificaciones_fotoMuestra.jpg">
+						<button class="no-border" data-toggle="modal" data-target="#myModal1">
+							<img class="img" src="img/biograft_certificaciones_001.jpg">
 						</button>
 					</div>
 					<!--		MODAL 			-->
-					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					  <div class="modal-dialog">
 					    <div class="modal-content">
 					      <div class="modal-header">
@@ -80,18 +80,18 @@
 					        <h4 class="modal-title" id="myModalLabel">Titulo de la foto</h4>
 					      </div>
 					      <div class="modal-body">
-					        <img class="img" src="img/certificaciones_fotoMuestra.jpg">
+					        <img class="img" src="img/biograft_certificaciones_001.jpg">
 					      </div>
 					    </div>
 					  </div>
 					</div>
 					<div class="col-xs-6 mt40">
-						<button class="no-border" data-toggle="modal" data-target="#myModal">
-							<img class="img" src="img/certificaciones_fotoMuestra.jpg">
+						<button class="no-border" data-toggle="modal" data-target="#myModal2">
+							<img class="img" src="img/biograft_certificaciones_002.jpg">
 						</button>
 					</div>
 					<!--MODAL -->
-					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					  <div class="modal-dialog">
 					    <div class="modal-content">
 					      <div class="modal-header">
@@ -99,18 +99,18 @@
 					        <h4 class="modal-title" id="myModalLabel">Titulo de la foto</h4>
 					      </div>
 					      <div class="modal-body">
-					        <img class="img" src="img/certificaciones_fotoMuestra.jpg">
+					        <img class="img" src="img/biograft_certificaciones_002.jpg">
 					      </div>
 					    </div>
 					  </div>
 					</div>
 					<div class="col-xs-6 mt20">
-						<button class="no-border" data-toggle="modal" data-target="#myModal">
-							<img class="img" src="img/certificaciones_fotoMuestra.jpg">
+						<button class="no-border" data-toggle="modal" data-target="#myModal3">
+							<img class="img" src="img/biograft_certificaciones_003.jpg">
 						</button>
 					</div>
 					<!--MODAL -->
-					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					  <div class="modal-dialog">
 					    <div class="modal-content">
 					      <div class="modal-header">
@@ -118,18 +118,18 @@
 					        <h4 class="modal-title" id="myModalLabel">Titulo de la foto</h4>
 					      </div>
 					      <div class="modal-body">
-					        <img class="img" src="img/certificaciones_fotoMuestra.jpg">
+					        <img class="img" src="img/biograft_certificaciones_003.jpg">
 					      </div>
 					    </div>
 					  </div>
 					</div>
 					<div class="col-xs-6 mt20">
-						<button class="no-border" data-toggle="modal" data-target="#myModal">
-							<img class="img" src="img/certificaciones_fotoMuestra.jpg">
+						<button class="no-border" data-toggle="modal" data-target="#myModal4">
+							<img class="img" src="img/biograft_certificaciones_004.jpg">
 						</button>
 					</div>
 					<!--MODAL -->
-					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					  <div class="modal-dialog">
 					    <div class="modal-content">
 					      <div class="modal-header">
@@ -137,7 +137,7 @@
 					        <h4 class="modal-title" id="myModalLabel">Titulo de la foto</h4>
 					      </div>
 					      <div class="modal-body">
-					        <img class="img" src="img/certificaciones_fotoMuestra.jpg">
+					        <img class="img" src="img/biograft_certificaciones_004.jpg">
 					      </div>
 					    </div>
 					  </div>

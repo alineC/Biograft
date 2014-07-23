@@ -55,12 +55,20 @@ $totalPages_noticias = ceil($totalRows_noticias/$maxRows_noticias)-1;
 $colname_noticiasid = "-1";
 if (isset($_GET['id'])) {
   $colname_noticiasid = $_GET['id'];
-}
+}else{
+	$colname_noticiasid = "5";
+} 
 mysql_select_db($database_connection, $connection);
 $query_noticiasid = sprintf("SELECT * FROM noticias WHERE id = %s", GetSQLValueString($colname_noticiasid, "int"));
 $noticiasid = mysql_query($query_noticiasid, $connection) or die(mysql_error());
 $row_noticiasid = mysql_fetch_assoc($noticiasid);
 $totalRows_noticiasid = mysql_num_rows($noticiasid);
+
+mysql_select_db($database_connection, $connection);
+$query_descargas = "SELECT * FROM descargas ORDER BY id DESC";
+$descargas = mysql_query($query_descargas, $connection) or die(mysql_error());
+$row_descargas = mysql_fetch_assoc($descargas);
+$totalRows_descargas = mysql_num_rows($descargas);
 ?>
 <?php include 'layout/head.php';?>
 <?php include 'layout/header.php';?>
@@ -84,15 +92,15 @@ $totalRows_noticiasid = mysql_num_rows($noticiasid);
 </div>
 
 
-  <div class="gray_bg biograft_tabs slider">
-    <div class="container gray_bg">
-      <ul class="nav nav-tabs ">
-        <li><a show-tab href="#home" data-toggle="tab">Eventos y Noticias</a></li>
-        <li><a show-tab href="#profile" data-toggle="tab">Descargas</a></li>
-        <li><a show-tab href="#messages" data-toggle="tab">Informaci&oacute;n del Paciente</a></li>
-      </ul>
-    </div>
+<div class="gray_bg biograft_tabs slider">
+  <div class="container gray_bg">
+    <ul class="nav nav-tabs ">
+      <li><a show-tab href="#home" data-toggle="tab">Eventos y Noticias</a></li>
+      <li><a show-tab href="#profile" data-toggle="tab">Descargas</a></li>
+      <li><a show-tab href="#messages" data-toggle="tab">Informaci&oacute;n del Paciente</a></li>
+    </ul>
   </div>
+</div>
 
 <div class="slider">
   <div class="container">
@@ -102,63 +110,39 @@ $totalRows_noticiasid = mysql_num_rows($noticiasid);
         <div class="row mt60 ">
           <div class="col-xs-12 mb20">
             <h4>Eventos y Noticias</h4>
-          </div>
-          
-          <table class="noticias_table">
-            <tr>
-              <td style="width: 33%; " class="text-center">
-                <?php do { ?>
-                <a href="?id=<?php echo $row_noticias['id']; ?>" class="thumbnail_noticias">
-                  <img src="<?php echo $row_noticias['foto']; ?>">
-                  <div class="caption">
-                    <h5><?php echo $row_noticias['titulo']; ?></h5>
+            </div>
+            <div class="col-xs-12 ">
+              <table class="noticias_table">
+              <tr>
+                <td style="width: 33%; " class="text-center">
+                  <?php do { ?>
+                  <a href="?id=<?php echo $row_noticias['id']; ?>" class="thumbnail_noticias">
+                    <img src="<?php echo $row_noticias['foto']; ?>">
+                    <div class="caption">
+                      <h5><?php echo $row_noticias['titulo']; ?></h5>
+                    </div>
+                  </a>
+                  <?php } while ($row_noticias = mysql_fetch_assoc($noticias)); ?>
+                </td>
+                <td style=" width: 66%;" class=" noticia">  
+                  <div class="">
+                    <h2><?php echo $row_noticiasid['titulo']; ?></h2>
+                      <img class="img-noticia" src="<?php echo $row_noticiasid['foto']; ?>">
+                      <h3>
+                          <?php echo $row_noticiasid['subtitulo']; ?>
+                      </h3>
+                      <p class="columnas mt20 text-justify">
+              <?php echo $row_noticiasid['cuerpo']; ?>
+                      </p>
                   </div>
-                </a>
-                <?php } while ($row_noticias = mysql_fetch_assoc($noticias)); ?>
-              </td>
-              <td style=" width: 66%;" class=" noticia">  
-                <div class="">
-                  <h2><?php echo $row_noticiasid['titulo']; ?></h2>
-                    <img class="img" src="<?php echo $row_noticiasid['foto']; ?>">
-                    <h3>
-                        <?php echo $row_noticiasid['subtitulo']; ?>
-                    </h3>
-                    <p class="columnas mt20 text-justify">
-            <?php echo $row_noticiasid['cuerpo']; ?>
-                    </p>
-                </div>
-              </td>
-            </tr>
-          </table>
-          <!--
-          <div class="col-xs-3 ">
-            <?php do { ?>
-            <a href="?id=<?php echo $row_noticias['id']; ?>" class="thumbnail">
-              <img src="<?php echo $row_noticias['foto']; ?>">
-              <div class="caption">
-                <h5><?php echo $row_noticias['titulo']; ?></h5>
-              </div>
-            </a>
-            <?php } while ($row_noticias = mysql_fetch_assoc($noticias)); ?>
+                </td>
+              </tr>
+            </table>
           </div>
-
-          <div class="col-xs-8 pull-right ">
-            <div class="noticia">
-              <h2><?php echo $row_noticiasid['titulo']; ?></h2>
-                <img class="img" src="<?php echo $row_noticiasid['foto']; ?>">
-                <h3>
-                    <?php echo $row_noticiasid['subtitulo']; ?>
-                </h3>
-                <p class="columnas mt20">
-        <?php echo $row_noticiasid['cuerpo']; ?>
-                </p>
-            </div>
-            </div>
-          -->
-
-          
         </div>
       </div>
+
+
       <div class="tab-pane" id="profile">
         <div class="row mt60">
           <div class="col-xs-12 mb20">
@@ -167,19 +151,20 @@ $totalRows_noticiasid = mysql_num_rows($noticiasid);
         </div>
         
         <div class="row mb130 ">
-          <div class="col-xs-2 ">
-            <a class="thumbnail" href="">
-              <img src="img/enlace_descargas_docMuestra.jpg">
-            </a>
-          </div>
+          <?php do { ?>
+            <div class="col-xs-2 "> <a class="thumbnail" href="<?php echo $row_descargas['archivo']; ?>" target="_blank"> <img src="<?php echo $row_descargas['imagen']; ?>"> </a> </div>
+          <?php } while ($row_descargas = mysql_fetch_assoc($descargas)); ?>
         </div>
+        
       </div>
+
+
       <div class="tab-pane" id="messages">
         <div class="row mt60 mb130">
           <div class="col-xs-5">
             <h2 class="no-margin">Informaci&oacute;n del Paciente <br>
-              <small class="text-justify">Consulte a su m&eacute;dico
-    sobre nuestros productos.
+              <small class="text-justify">Consulte a su m&eacute;dico<br />
+sobre nuestros productos.
     </small>
             </h2>
             <p class="mt20 text-justify">
@@ -194,11 +179,10 @@ $totalRows_noticiasid = mysql_num_rows($noticiasid);
             <img class="img" src="img/biograft_enlace_infoPaciente.jpg">
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+      </div><!--tab pane ultimo -->
+    </div> <!--tab content -->
+  </div> <!-- container -->
+</div> <!-- slider -->
 
 
 
@@ -209,4 +193,6 @@ $totalRows_noticiasid = mysql_num_rows($noticiasid);
 mysql_free_result($noticias);
 
 mysql_free_result($noticiasid);
+
+mysql_free_result($descargas);
 ?>
